@@ -1,4 +1,4 @@
-# Berkeley-climate-date
+# Berkeley-climate-data
 Visualization of climate change using data collected by [Berkeley Earth](http://berkeleyearth.org/source-files/).
 
 ## Goal
