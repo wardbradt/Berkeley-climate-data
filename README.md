@@ -8,9 +8,13 @@ The datasets included in this project are the "Colonial Era Weather Archive (CA)
 
 One may visualize other datasets attained from [this link](http://berkeleyearth.org/source-files/) by following the steps in the Jupyter notebook.
 
+## Issues
+* Not transitioning correctly
+
 ## To-Do
 I would love to enhance this project. However, my time is currently being allocated to other projects. If you would like to contribute to this repository, but do not know how, here are some features I would like to implement:
 
+* Add an introduction to the top of the webpage describing the website's purpose.
 * Offering the choice of which datasets to visualize
 * Adding more Berkeley Earth datasets to this repository by following the instructions in the notebook.
 * Writing a program to automatically clean the `tsv` files from Berkeley Earth.
