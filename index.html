@@ -3,7 +3,6 @@
 <!--Used this viz for help:-->
 <!--https://bl.ocks.org/mbostock/4180634-->
 <head>
-    <!--Do not know why I have to use both d3 v3 and v4. Code does not work if using only v4.-->
     <script src="//d3js.org/d3.v3.min.js"></script>
     <script src="//d3js.org/d3.v4.min.js"></script>
     <script src="//d3js.org/d3.geo.projection.v0.min.js"></script>
@@ -185,7 +184,7 @@
                     arr.push({"year": key, "average_temp": dict[key]});
                 });
 
-                var x_range = d3.extent(arr, function(d) { return d["year"]});
+                var x_range = d3.extent(arr, function(d) { return +d["year"]});
                 var y_range = d3.extent(arr, function(d) { return d["average_temp"]});
 
                 var x = d3.scaleLinear()
@@ -217,6 +216,12 @@
                     .style("fill-opacity", 1e-6)
                     .remove();
 
+                circles
+                    .transition(t)
+                    .duration(1000)
+                    .attr("cx", function(d) {return x(d["year"]);})
+                    .attr("cy", function(d) {return y(d["average_temp"]);});
+                
                 circles
                     .enter()
                     .append("circle")
